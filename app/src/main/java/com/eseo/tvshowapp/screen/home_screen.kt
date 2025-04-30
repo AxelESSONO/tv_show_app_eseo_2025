@@ -30,7 +30,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(200.dp)
+                    .height(20.dp)
             ) {  }
         }
     }
