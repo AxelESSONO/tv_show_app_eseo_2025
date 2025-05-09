@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import com.eseo.tvshowapp.R
 import com.eseo.tvshowapp.data.tvShows
 
@@ -31,11 +32,10 @@ fun HorizontalTvShow(index: Int) {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            Image(
-                painter = painterResource(
-                    id = R.drawable.ic_launcher_background
-                ),
-                contentDescription = null
+
+            AsyncImage(
+                model = tvShows[index].imageUrl,
+                contentDescription = null,
             )
 
             Text(
